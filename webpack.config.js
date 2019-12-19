@@ -13,6 +13,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
+      {
         test: /\.html$/,
         use: [
           {
@@ -72,8 +77,10 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
     {
-      from: './src/images/favicon',
-      to: 'assets/images/favicon'
+      // from: './src/images/favicon',
+      // to: 'assets/images/favicon',
+      from: './src/images',
+      to: 'assets/images'
     }
   ])
   ],

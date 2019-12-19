@@ -6,94 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Weather App</title>
   <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css" rel="stylesheet"/>
+  <script defer src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
 </head>
 
 <body>
   <div class="wrapper">
-  <header class="header">
-    <div class="header--operations">
-      <button class="header--operations_refresh"><img src="./images/refresh-icon.svg" alt=""></button>
-      <div class="header--wrapper">
-        <select class="language_select">
-          <option class="language_select--option" value="rus">rus</option>
-          <option class="language_select--option" value="en">en</option>
-          <option class="language_select--option" value="by">by</option>
-        </select>
-      </div>
-      <div class="header--temperature">
-        <button class="header--temperature_celsius">&deg;C</button>
-        <button class="header--temperature_fahrenheit">&deg;F</button>
-      </div>
-    </div>
-    <div class="header--search">
-      <input class="header--search_input" type="text" value="Search city or ZIP">
-      <button class='header--search_submit'>search</button>
-    </div>
-  </header>
-  <div class="main">
-    <div class="destination_date">
-      <div class="destination">
-        <span class="destination--town">Minsk</span>, <span class="destination--country">Belarus</span>
-      </div>
-      <div class="date">
-        <span class="date--weekday">Mon</span>, <span class="date--number">28</span> <span class="date--month">October</span> <span class="date--time">17:23</span>
-      </div>
-    </div>
-    <div class="primary_data">
-      <div class="primary_data--forecast">
-        <div class="forecast_today">
-          <div class="forecast_today--degrees">
-            <span class="forecast_today--degrees_amount">10</span> <span class="forecast_today--degrees_icon">&deg;</span> <img src="./images/monday.svg" alt="" class="forecast_today--weather_image">
-          </div>
-          <div class="forecast_today--details">
-            <span class="forecast_today--sky">overcast</span>
-            <div class="forecast_today--sensation">
-                <span class="forecast_today--sensation_title">feels like:</span> <span class="forecast_today--sensation_intensity">7</span> <span class="forecast_today--sensation_icon">&deg;</span>
-              </div>
-              <div class="forecast_today--wind">
-                  <span class="forecast_today--wind_title">wind:</span> <span class="forecast_today--wind_intensity">2</span> <span class="forecast_today--wind_icon">m/s</span>
-                </div>
-                <div class="forecast_today--humidity">
-                    <span class="forecast_today--humidity_title">humidity:</span> <span class="forecast_today--humidity_intensity">83</span> <span class="forecast_today--humidity_icon">%</span>
-                </div>
-          </div>
-        </div>
-        <div class="forecast_week">
-          <div class="forecast_week--days tomorrow">
-            <span class="tomorrow--title forecast_week--title">tuesday</span>
-            <div class="forecast_week--weather_indication">
-              <span class="tomorrow--temperature">7</span> <span class="tomorrow--icon">&deg;</span> <img class="tomorrow-image" src="./images/tuesday.svg" alt="">
-            </div>
-          </div>
-          <div class="forecast_week--days over_one">
-              <span class="over_one--title forecast_week--title">wednesday</span>
-              <div class="forecast_week--weather_indication">
-                <span class="over_one--temperature">6</span> <span class="over_one--icon">&deg;</span> <img class="over_one--image" src="./images/wednesday.svg" alt="">
-              </div>
-          </div>
-          <div class="forecast_week--days over_two">
-              <span class="over_two--title forecast_week--title">thursday</span>
-              <div class="forecast_week--weather_indication">
-                <span class="over_two--temperature">3</span> <span class="over_two--icon">&deg;</span> <img class="over_two-image" src="./images/wednesday.svg" alt="">
-              </div>
-          </div>
-        </div>
-      </div>
-      <div class="primary_data--map">
-        <div class="map_data">
-          <img class="map_data--image" src="./images/map.png" alt="">
-        </div>
-        <div class="coordinates_data">
-          <div class="coordinates_data--latitude">
-            <span class="latitude_title">Latitude:</span> <span class="latitude--value">5354</span>
-          </div>
-          <div class="coordinates_data--longitude">
-            <span class="longitude_title">Longitude:</span> <span class="longitude--value">2734</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
 </body>
 </html>

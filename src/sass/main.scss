@@ -1,7 +1,7 @@
 @import "./base/normalize";
 
 html {
-  font-size: 16px;
+  font-size: 14px;
   @media (max-width: 780px) {
     font-size: 13px;
   }
@@ -19,7 +19,7 @@ html {
   justify-content: space-around;
   max-width: 1400px;
   margin: 0 auto;
-  height: 800px;
+  height: 100vh;
   background: url(../images/bg.png) no-repeat 50% 50%;
   background-size: cover;
   position: relative;
@@ -193,6 +193,12 @@ html {
 .primary_data {
   display: flex;
   justify-content: space-evenly;
+  &--forecast {
+    @media (max-width: 1240px) {
+      flex-basis: auto;
+    }
+    flex-basis: 50%;
+  }
   &--map {
     display: flex;
     flex-direction: column;
@@ -210,9 +216,8 @@ html {
 
 .forecast_today {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   @media (max-width: 580px) {
-    justify-content: space-evenly;
     flex-wrap: wrap;
   }
   &--degrees {
@@ -235,7 +240,7 @@ html {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 19.13rem;
+    font-size: 12.13rem;
     line-height: 23.31rem;
     text-transform: uppercase;
     color: #ffffff;
@@ -251,6 +256,7 @@ html {
     margin-top: 6.25rem;
   }
   &--weather_image {
+    align-self: center;
     @media (max-width: 410px) {
       width: 100px;
     }
@@ -260,10 +266,10 @@ html {
 
 .forecast_week {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   @media (max-width: 580px) {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-top:  2.5rem;
   }
@@ -289,16 +295,24 @@ html {
     justify-content: space-evenly;
   }
 }
-//map
-.map_data {
-  max-width: 375px;
-  
-  &--image {
-    width: 100%;
-    border-radius: 10px;
-  }
+
+#map {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 5px;
 }
 //map
+.map_wrapper {
+  @media (max-width: 400px) {
+    width: 300px;
+    height: 300px;
+  }
+  position: relative;
+  width: 375px;
+  height: 375px;
+}
 
 .coordinates_data {
   font-family: Montserrat;
