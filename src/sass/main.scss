@@ -358,6 +358,9 @@ body {
 }
 
 .preloader {
+  @media (max-width: 600px) {
+    left: 55%;
+  }
   position: absolute;
   left: 50%;
   top: 50%;
