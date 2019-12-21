@@ -5,10 +5,11 @@ export default class Controller {
         this.view = view;
         this.view.langChangeBind(this.changeLangHandle);
         this.view.searchInputBind(this.searchInputHandle);
-        this.view.buttonFarBind(this.convertToFarengeit);
-        this.view.buttonCelBind(this.convertToCelsius);
+        this.view.buttonFarBind(this.changeLangHandle);
+        this.view.buttonCelBind(this.changeLangHandle);
+        this.view.buttonRefreshBind (this.refreshButtonHandle);
+        this.view.timeRefreshBind (this.refreshTimeHandle);
         this.model.appChangesBind(this.appChangesRespond);
-
         this.model.initApp();
     }
 
@@ -30,5 +31,13 @@ export default class Controller {
 
     convertToCelsius = () => {
         this.model.convertToC ()
+    }
+
+    refreshButtonHandle = () => {
+        this.model.refreshApp() 
+    }
+
+    refreshTimeHandle = () => {
+        this.model.timeRefresh() 
     }
 }

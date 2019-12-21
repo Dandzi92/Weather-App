@@ -9,8 +9,8 @@ const template = `<header class="header">
     </select>
   </div>
   <div class="header--temperature">
-    <button class="header--temperature_celsius">&deg;C</button>
-    <button class="header--temperature_fahrenheit">&deg;F</button>
+    <button class="header--temperature_celsius" value='c'>&deg;C</button>
+    <button class="header--temperature_fahrenheit" value='f'>&deg;F</button>
   </div>
 </div>
 <div class="header--search">
@@ -75,10 +75,10 @@ const template = `<header class="header">
     
     <div class="coordinates_data">
       <div class="coordinates_data--latitude">
-        <span class="latitude_title"></span> <span class="latitude--value"></span>
+        <span class="latitude_title"></span> <span class="latitude--value"><span class='latitude--value-degrees'></span>&#176;<span class='latitude--value-minutes'></span>&#8242;</span>
       </div>
       <div class="coordinates_data--longitude">
-        <span class="longitude_title"></span> <span class="longitude--value"></span>
+        <span class="longitude_title"></span> <span class="longitude--value"><span class='longitude--value-degrees'></span>&#176;<span class='longitude--value-minutes'></span>&#8242;</span>
       </div>
     </div>
   </div>
