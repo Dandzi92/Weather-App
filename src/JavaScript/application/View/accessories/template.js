@@ -83,6 +83,6 @@ const template = `<header class="header">
     </div>
   </div>
 </div>
-</div>`
+</div>`;
 
-export {template};
+export { template };
