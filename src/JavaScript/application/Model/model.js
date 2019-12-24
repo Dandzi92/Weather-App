@@ -144,15 +144,16 @@ export default class Model {
     this.data.main.forecast.today.summary.clouds.en = currentWeather[0].currently.summary;
     this.data.main.forecast.today.summary.clouds.ru = currentWeather[1].currently.summary;
     this.data.main.forecast.today.summary.clouds.be = currentWeather[2].currently.summary;
-    this.data.main.forecast.week.tomorrow.value.f = Math.round((currentWeather[0].daily.data[2].temperatureHigh + currentWeather[0].daily.data[2].temperatureLow) / 2);
+    
+    this.data.main.forecast.week.tomorrow.value.f = Math.round((currentWeather[0].daily.data[1].temperatureHigh + currentWeather[0].daily.data[1].temperatureLow) / 2);
     this.data.main.forecast.week.tomorrow.value.c = this.degreesExchangeToC(this.data.main.forecast.week.tomorrow.value.f);
-    this.data.main.forecast.week.tomorrow.icon = currentWeather[0].daily.data[2].icon;
-    this.data.main.forecast.week.aftertomorrow.value.f = Math.round((currentWeather[0].daily.data[3].temperatureHigh + currentWeather[0].daily.data[3].temperatureLow) / 2);
+    this.data.main.forecast.week.tomorrow.icon = currentWeather[0].daily.data[1].icon;
+    this.data.main.forecast.week.aftertomorrow.value.f = Math.round((currentWeather[0].daily.data[2].temperatureHigh + currentWeather[0].daily.data[2].temperatureLow) / 2);
     this.data.main.forecast.week.aftertomorrow.value.c = this.degreesExchangeToC(this.data.main.forecast.week.aftertomorrow.value.f);
-    this.data.main.forecast.week.aftertomorrow.icon = currentWeather[0].daily.data[3].icon;
-    this.data.main.forecast.week.aftertomorrows.value.f = Math.round((currentWeather[0].daily.data[4].temperatureHigh + currentWeather[0].daily.data[4].temperatureLow) / 2);
+    this.data.main.forecast.week.aftertomorrow.icon = currentWeather[0].daily.data[2].icon;
+    this.data.main.forecast.week.aftertomorrows.value.f = Math.round((currentWeather[0].daily.data[3].temperatureHigh + currentWeather[0].daily.data[3].temperatureLow) / 2);
     this.data.main.forecast.week.aftertomorrows.value.c = this.degreesExchangeToC(this.data.main.forecast.week.aftertomorrows.value.f);
-    this.data.main.forecast.week.aftertomorrows.icon = currentWeather[0].daily.data[4].icon;
+    this.data.main.forecast.week.aftertomorrows.icon = currentWeather[0].daily.data[3].icon;
   }
 
   setAppLocationInfo(currentLocation) {
